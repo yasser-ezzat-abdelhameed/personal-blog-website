@@ -11,6 +11,8 @@ body {
   margin: 0;
   font-size: 1rem;
   overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 h1,
@@ -27,11 +29,14 @@ a {
 
 body {
   background-color: #f0f0f8;
+  color: #444;
   font-family: Poppins-Regular, sans-serif;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 3em 1fr 3em;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
 }
 
 a {
@@ -40,9 +45,9 @@ a {
 }
 
 #header {
+  grid-area: header;
   background-color: #444;
   width: 100vw;
-  height: 3em;
   display: flex;
   align-items: center;
 }
@@ -72,15 +77,15 @@ a {
 }
 
 .content {
-  flex: 1;
+  grid-area: content;
   padding: 1.5em;
 }
 
 #footer {
+  grid-area: footer;
   background-color: #444;
   color: #7272d5;
   width: 100vw;
-  height: 3em;
   display: flex;
   justify-content: center;
   align-items: center;

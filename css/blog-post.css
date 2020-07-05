@@ -1,0 +1,89 @@
+@import url("main.css");
+
+.content {
+  padding: unset;
+}
+
+.blog-post-header {
+  height: 12em;
+  background: url("https://source.unsplash.com/1200x800/?sky");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.blog-post-header h1 {
+  background: rgba(0, 0, 0, 0.35);
+  color: whitesmoke;
+  padding: 0.5em 1em;
+}
+
+.blog-post-section {
+  padding: 1em;
+}
+
+.blog-post figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-figure {
+  width: 90%;
+}
+
+.social-links {
+  text-align: center;
+}
+
+.social-link {
+  font-size: 3em;
+}
+
+.blog-author-container {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.blog-author header {
+  grid-area: header;
+}
+
+.blog-author figure {
+  grid-area: avatar;
+}
+
+.author-avatar {
+  border-radius: 50%;
+  width: 6.25em;
+  height: 6.25em;
+}
+
+.blog-author footer {
+  grid-area: footer;
+}
+
+@media (min-width: 768px) {
+  .blog-author {
+    display: grid;
+    grid-template-columns: 8em 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "avatar header"
+      "avatar header"
+      "avatar footer";
+    text-align: unset;
+  }
+}

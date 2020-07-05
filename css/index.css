@@ -1,0 +1,88 @@
+@import url("main.css");
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 1em 0;
+  background-blend-mode: overlay;
+  color: whitesmoke;
+}
+
+.card:nth-of-type(1) {
+  background: url("https://source.unsplash.com/500x500/?article");
+}
+.card:nth-of-type(2) {
+  background: url("https://source.unsplash.com/500x500/?summer");
+}
+.card:nth-of-type(3) {
+  background: url("https://source.unsplash.com/500x500/?soccer");
+}
+.card:nth-of-type(4) {
+  background: url("https://source.unsplash.com/500x500/?sky");
+}
+.card:nth-of-type(5) {
+  background: url("https://source.unsplash.com/500x500/?game");
+}
+
+.card article {
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 12em;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas:
+    "hd"
+    "hd"
+    "hd"
+    "bd"
+    "bd"
+    "bd"
+    "bd"
+    "ft"
+    "ft";
+}
+
+.card article header {
+  grid-area: hd;
+}
+
+.card article > div {
+  grid-area: bd;
+  display: flex;
+  align-items: center;
+}
+
+.card article p {
+  font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.card article footer {
+  grid-area: ft;
+  display: flex;
+  align-items: center;
+}
+
+.card article footer a {
+  font-size: 0.9em;
+  padding: 0.5em;
+  background-color: #f0f0f8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+}
+
+@media (min-width: 1366px) {
+  .blog-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

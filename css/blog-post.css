@@ -2,6 +2,7 @@
 
 .content {
   padding: unset;
+  padding-bottom: 1em;
 }
 
 .blog-post-header {
@@ -85,5 +86,33 @@
       "avatar header"
       "avatar footer";
     text-align: unset;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog-post-header {
+    height: 18em;
+  }
+  .blog-post-section {
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2.5em 1fr;
+    grid-template-areas:
+      "figure header"
+      "figure content";
+  }
+  .post-section-header {
+    grid-area: header;
+  }
+  .post-section-content {
+    grid-area: content;
+  }
+  .post-section-figure {
+    grid-area: figure;
+  }
+  .blog-figure {
+    width: 100%;
   }
 }

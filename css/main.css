@@ -83,10 +83,16 @@ a {
 
 #footer {
   grid-area: footer;
-  background-color: #444;
-  color: #7272d5;
+  background-color: white;
+  color: #5555cc;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 1200px) {
+  #header .nav-right-section {
+    padding-right: 1.5em;
+  }
 }

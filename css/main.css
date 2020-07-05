@@ -1,9 +1,6 @@
-@font-face {
-  font-family: "Poppins-Regular";
-  src: url("../fonts/Poppins-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("fonts.css");
+@import url("header.css");
+@import url("footer.css");
 
 html,
 body {
@@ -44,55 +41,7 @@ a {
   color: #5555cc;
 }
 
-#header {
-  grid-area: header;
-  background-color: #444;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-}
-
-#header a {
-  color: whitesmoke;
-}
-
-#header nav {
-  display: flex;
-  flex: 1;
-}
-
-#header .nav-logo {
-  flex: 1;
-  padding-left: 1em;
-}
-
-#header .nav-right-section {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 0.5em;
-}
-
-#header .nav-right-section a {
-  padding: 0 0.5em;
-}
-
 .content {
   grid-area: content;
   padding: 1.5em;
-}
-
-#footer {
-  grid-area: footer;
-  background-color: white;
-  color: #5555cc;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (min-width: 1200px) {
-  #header .nav-right-section {
-    padding-right: 1.5em;
-  }
 }

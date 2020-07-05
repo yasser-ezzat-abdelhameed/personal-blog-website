@@ -10,20 +10,24 @@
 .card:nth-of-type(1) {
   background: url("https://source.unsplash.com/500x500/?article");
 }
+
 .card:nth-of-type(2) {
   background: url("https://source.unsplash.com/500x500/?summer");
 }
+
 .card:nth-of-type(3) {
   background: url("https://source.unsplash.com/500x500/?soccer");
 }
+
 .card:nth-of-type(4) {
   background: url("https://source.unsplash.com/500x500/?sky");
 }
+
 .card:nth-of-type(5) {
   background: url("https://source.unsplash.com/500x500/?game");
 }
 
-.card article {
+.card-content {
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.35);
   height: 12em;
@@ -41,17 +45,17 @@
     "ft";
 }
 
-.card article header {
+.card-header {
   grid-area: hd;
 }
 
-.card article > div {
+.card-paragraph-container {
   grid-area: bd;
   display: flex;
   align-items: center;
 }
 
-.card article p {
+.card-paragraph {
   font-size: 0.9em;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -60,13 +64,13 @@
   -webkit-box-orient: vertical;
 }
 
-.card article footer {
+.card-footer {
   grid-area: ft;
   display: flex;
   align-items: center;
 }
 
-.card article footer a {
+.card-bottom-link {
   font-size: 0.9em;
   padding: 0.5em;
   background-color: #f0f0f8;
